@@ -60,7 +60,7 @@ jobs:
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
     # 7) Trivy vulnerability scan (fail on CRITICAL/HIGH)
-    - uses: aquasecurity/trivy-action@v0.19.0
+    - uses: aquasecurity/trivy-action@v0.31.0
       with:
         image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
         severity: 'CRITICAL,HIGH'
