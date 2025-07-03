@@ -1,7 +1,10 @@
 name: cd
 
 on:
-  workflow_dispatch:   # run manually for now
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   REGISTRY: cicdprojectregistry.azurecr.io
