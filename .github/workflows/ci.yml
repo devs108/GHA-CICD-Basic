@@ -1,7 +1,9 @@
 name: ci
 
 on:
-  workflow_dispatch:       # run manually for now
+  pull_request:
+    branches:
+      - main
 
 env:
   REGISTRY: cicdprojectregistry.azurecr.io
