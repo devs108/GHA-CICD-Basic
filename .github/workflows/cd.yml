@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Log in to ACR
-    - uses: azure/docker-login@v2
+      uses: azure/docker-login@v2
       with:
         login-server: ${{ env.REGISTRY }}
         username: ${{ secrets.ACR_USERNAME }}
